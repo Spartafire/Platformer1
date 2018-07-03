@@ -44,6 +44,10 @@
 
 				this.load.spritesheet("dude", "assets/dude.png", {frameWidth: 32, frameHeight: 48});
 
+				this.load.audio("theme",[
+					"assets/Rick Astley - Never Gonna Give You Up (Video).mp3"
+					]);
+
 			}
 
 			function create(){
@@ -113,6 +117,10 @@
 				//UI
 					scoreText = this.add.text(16, 16, "Score : 0", {fontSize: "32px", fill: "#000"});
 					bombText = this.add.text(250, 16, "Bombs : 0", {fontSize: "32px", fill: "#000"});
+
+				//audio
+					var music = this.sound.add("theme");
+					music.play();
 
 			}
 
